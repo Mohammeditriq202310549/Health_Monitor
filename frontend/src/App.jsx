@@ -121,7 +121,7 @@ function App() {
     .map((val, idx) => {
       const x = chartHistory.length > 1 ? (idx / (chartHistory.length - 1)) * svgWidth : svgWidth / 2;
       const y = svgHeight - (val / 100) * svgHeight;
-      return `${x},${y}`;
+      return `${x},${y}`; 
     })
     .join(' ');
 
@@ -165,7 +165,7 @@ function App() {
               style={{
                 width: `${Math.min(cpuValue || 0, 100)}%`,
                 backgroundColor: currentStatus === 'warning' ? '#f43f5e' : '#10b981',
-                boxShadow: `0 0 12px ${currentStatus === 'warning' ? '#f43f5e' : '#10b981'}`,
+                boxShadow: `0 0 0.75rem ${currentStatus === 'warning' ? '#f43f5e' : '#10b981'}`,
               }}
             ></div>
           </div>
@@ -198,7 +198,7 @@ function App() {
               style={{
                 width: `${Math.min(gpuValue || 0, 100)}%`,
                 backgroundColor: gpuValue !== null && gpuValue > 85 ? '#f43f5e' : '#a855f7',
-                boxShadow: `0 0 12px ${gpuValue !== null && gpuValue > 85 ? '#f43f5e' : '#a855f7'}`,
+                boxShadow: `0 0 0.75rem ${gpuValue !== null && gpuValue > 85 ? '#f43f5e' : '#a855f7'}`,
               }}
             ></div>
           </div>
@@ -231,7 +231,7 @@ function App() {
               style={{
                 width: `${Math.min((cpuTemp || 0) / 100 * 100, 100)}%`,
                 backgroundColor: cpuTemp !== null && cpuTemp > 75 ? '#f43f5e' : '#f59e0b',
-                boxShadow: `0 0 12px ${cpuTemp !== null && cpuTemp > 75 ? '#f43f5e' : '#f59e0b'}`,
+                boxShadow: `0 0 0.75rem ${cpuTemp !== null && cpuTemp > 75 ? '#f43f5e' : '#f59e0b'}`,
               }}
             ></div>
           </div>
@@ -264,7 +264,7 @@ function App() {
               style={{
                 width: `${Math.min(memValue || 0, 100)}%`,
                 backgroundColor: '#38bdf8',
-                boxShadow: '0 0 12px #38bdf8',
+                boxShadow: '0 0 0.75rem #38bdf8',
               }}
             ></div>
           </div>
